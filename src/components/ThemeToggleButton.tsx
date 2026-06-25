@@ -4,14 +4,14 @@
   let theme = ''
 
   if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-    theme = localStorage.getItem('theme');
+    theme = localStorage.getItem('theme')
   } else if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    theme = 'dark';
+    theme = 'dark'
   }
 
   function handleChange(event) {
-    theme = event.target.value;
-    localStorage.setItem('theme', theme);
+    theme = event.target.value
+    localStorage.setItem('theme', theme)
   }
 
   $: if (rootEl && theme === 'light') {
